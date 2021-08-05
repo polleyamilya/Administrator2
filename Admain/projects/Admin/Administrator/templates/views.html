@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Administrator List</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+    
+</head>
+<body>
+    <table class="table table-striped table-bordered table-sm">
+    <thread class="thead-dark">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thread>
+    {%for Administrator in Administrator %}
+    <tr>
+        <td>{{Administrator.sId}}</td>
+        <td>{{Administrator.f_name}}</td>
+        <td>{{Administrator.l_name</td>
+        <td>{{Administrator.email</td> 
+        <td>{{Administrator.mobile</td>
+        <td>
+            <a href ="/edit/{{Administrator.sId}}"><span class="btn btn-success">Edit</span></a>
+            <a href="/delete/{{student.id}}" class="btn btn-danger">Delete</a>
+        
+        </td>         
+    </tr>   
+ {%endfor %}   
+    </table>
+</body>
+</html>

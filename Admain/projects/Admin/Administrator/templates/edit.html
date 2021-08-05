@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>title</title>
+    {%load staticfiles %}
+    <link rel="stylesheet" href="{% static ' css/bootstrap.min.css'%}"/>
+</head>
+<form method="POST" class="post-form" action="/update/{{Administrator.id}}">
+  <input type="hidden" name="sId" id="sId" required maxlength="20" value="{{Administrator.sId}}"/>
+    {%csrf_token %}    
+   <div class ="container">
+<br>
+   <div class="form-group row">
+    <label class="col-sm-1 col-form-label"></label>
+    <div class="col-sm-4">
+     <h3>Enter Details</h3>
+    </div>   
+   </div>   
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Administrator Id:</label>
+    <div class="col-sm-4">
+        <input type="hidden" name="sId" id="sId" required maxlength="20" value="{{Administrator.sId}}"/>
+  
+        
+    </div>    
+</div>
+<div class="form-group row">
+    <label class="col-sm-2 col-form-label">Administrator Id:</label>
+    <div class="col-sm-4">
+    <input type="text" name="f_name"  value="{{Administrator.f_name}}"/>
+    </div>  
+   </div>
+   <div class="form-group row">
+    <label class="col-sm-2 col-form-label">First Name:</label>
+    <div class="col-sm-4">
+     <input type="text" name="l_name"  value="{{Administrator.l_name}}"/> 
+    </div>   
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Last Name:</label>
+        <div class="col-sm-4">
+       <input type="email" name="email"  value="{{Administrator.email}}"/>
+        </div>  
+       </div>
+
+     <div class="form-group row"></div>    
+     <label class ="col-sm-1 col-form-label"></label>
+    <div class="col-sm-4">
+     <button type="submit" class="btn btn-primary">Submit</button>   
+    </div>
+    </div>
+    </div>
+    
+
+    
+</form>
+</html>
